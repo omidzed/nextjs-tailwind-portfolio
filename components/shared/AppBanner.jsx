@@ -45,12 +45,11 @@ function AppBanner() {
 					}}
 					className='flex justify-center sm:block'>
 					<a
-						download='Omid-Resume.pdf'
 						href='/files/Omid-Resume.pdf'
-						className='font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500'
-						aria-label='Download Resume'>
-						<FiArrowDownCircle className='ml-0 sm:ml-1 mr-1 h-4 w-6 sn:w-8 sm:h-5 duration-100'></FiArrowDownCircle>
-						<span className='text-sm sm:text-lg pr-2 whitespace-nowrap duration-100'>View My Resume!</span>
+						className='font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-[#016DFD] py-3 sm:py-3 shadow-lg rounded-lg bg-yellow-200 focus:ring-1 focus:[#016DFD] hover:bg-blue-500 text-[#016DFD] hover:text-yellow-300 duration-500'
+						aria-label='View Resume'>
+
+						<span className='flex justify-center text-sm sm:text-lg pr-2 whitespace-nowrap duration-100'>View My Resume!</span>
 					</a>
 				</motion.div>
 			</div>
