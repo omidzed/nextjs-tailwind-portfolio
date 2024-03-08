@@ -154,7 +154,7 @@ function AppHeader() {
 					<div className='hidden md:flex'>
 						<button
 							onClick={showHireMeModal}
-							className='text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300'
+							className='text-md font-general-medium bg-blue-600 hover:bg-blue-800 hover:text-yellow-200 text-white shadow-sm rounded-md px-5 py-2.5 duration-300'
 							aria-label='Hire Me Button'>
 							Hire Me
 						</button>
