@@ -33,9 +33,10 @@ function useScrollToTop() {
 	return (
 		<>
 			<FiChevronUp
-				className="scrollToTop"
+				className='scrollToTop'
 				onClick={backToTop}
 				style={{
+					backgroundColor: '#066DFF',
 					height: 40,
 					width: 40,
 					padding: 7,

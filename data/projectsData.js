@@ -1,11 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import {
-	FiFacebook,
-	FiInstagram,
-	FiLinkedin,
-	FiTwitter,
-	FiYoutube,
-} from 'react-icons/fi';
+import { FiFacebook, FiInstagram, FiLinkedin, FiTwitter, FiYoutube } from 'react-icons/fi';
 
 export const projectsData = [
 	{
@@ -22,8 +16,8 @@ export const projectsData = [
 		ProjectImages: [
 			{
 				id: uuidv4(),
-				title: 'Google Health Platform',
-				img: '/images/ui-project-1.jpg',
+				title: `Let's Parlay`,
+				img: '/images/letsParlay/Screenshot 2024-03-09 001212.png',
 			},
 			{
 				id: uuidv4(),
@@ -42,31 +36,26 @@ export const projectsData = [
 				{
 					id: uuidv4(),
 					title: 'Name',
-					details: 'Company Ltd',
+					details: 'Omid Zedd Productions',
 				},
 				{
 					id: uuidv4(),
 					title: 'Services',
-					details: 'Web Development',
+					details: 'Virtual Sports Book',
 				},
 				{
 					id: uuidv4(),
 					title: 'Website',
-					details: 'https://company.com',
-				},
-				{
-					id: uuidv4(),
-					title: 'Phone',
-					details: '555 8888 888',
+					details: 'https://letsparlay.vercel.app/',
 				},
 			],
 			ObjectivesHeading: 'Objective',
-			ObjectivesDetails:
-				'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+			ObjectivesDetails: `The primary purpose of our app is to provide a fun, risk-free environment for MMA fans to engage with the sport in a new way. It's an excellent way for beginners to get acquainted with betting concepts and for experienced bettors to test strategies.`,
+
 			Technologies: [
 				{
 					title: 'Tools & Technologies',
-					techs: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'TailwindCSS', 'AdobeXD'],
+					techs: ['HTML', 'CSS', 'TypeScript', 'Vite', 'TailwindCSS', 'Figma', 'Adobe Photshop'],
 				},
 			],
 			ProjectDetailsHeading: 'Challenge',
@@ -81,18 +70,7 @@ export const projectsData = [
 					details:
 						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
 				},
-				{
-					id: uuidv4(),
-					details:
-						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-				},
-				{
-					id: uuidv4(),
-					details:
-						'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-				},
 			],
-			SocialSharingHeading: 'Share This',
 			// SocialSharing: [
 			// 	{
 			// 		id: uuidv4(),
@@ -132,11 +110,11 @@ export const projectsData = [
 		title: 'Defi-City',
 		url: 'https://deficity.vercel.app/',
 		category: 'Web Application',
-		img: '/images/mobile-project-2.jpg',
+		img: '/images/deficity.png',
 		ProjectHeader: {
 			title: 'Defi-City',
-			publishDate: 'Jul 26, 2021',
-			tags: 'Mobile Application',
+			publishDate: 'Feb 20, 2024',
+			tags: 'Web Application',
 		},
 		ProjectImages: [
 			{
@@ -331,7 +309,6 @@ export const projectsData = [
 				},
 			],
 			SocialSharingHeading: 'Share This',
-		
 		},
 	},
 ];

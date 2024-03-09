@@ -37,7 +37,7 @@ function ProjectsGrid() {
 			<div className="mt-10 sm:mt-16">
 				<h3
 					className="
-                        font-general-regular 
+                        font-general-regular
                         text-center text-secondary-dark
                         dark:text-ternary-light
                         text-md
@@ -77,12 +77,12 @@ function ProjectsGrid() {
 								setSearchProject(e.target.value);
 							}}
 							className="
-                                ont-general-medium 
+                                ont-general-medium
                                 pl-3
                                 pr-1
                                 sm:px-4
                                 py-2
-                                border 
+                                border
                             border-gray-200
                                 dark:border-secondary-dark
                                 rounded-lg
