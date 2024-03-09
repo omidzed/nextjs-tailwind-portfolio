@@ -33,7 +33,7 @@ function AppBanner() {
 						delay: 0.2,
 					}}
 					className='font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-2xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200'>
-					A Full-Stack Developer & Design Enthusiast
+					A Full-Stack Software Developer
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -46,7 +46,7 @@ function AppBanner() {
 					className='flex justify-center sm:block'>
 					<a
 						href='/files/Omid-Resume.pdf'
-						className='font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-[#016DFD] py-3 sm:py-3 shadow-lg rounded-lg bg-yellow-200 focus:ring-1 focus:[#016DFD] hover:bg-blue-500 text-[#016DFD] hover:text-yellow-300 duration-500'
+						className='font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-[#016DFD] py-3 sm:py-3 shadow-lg rounded-lg bg-blue-600 focus:ring-1 focus:[#016DFD] hover:bg-blue-500 text-white hover:text-yellow-300 duration-500'
 						aria-label='View Resume'>
 
 						<span className='flex justify-center text-sm sm:text-lg pr-2 whitespace-nowrap duration-100'>View My Resume!</span>

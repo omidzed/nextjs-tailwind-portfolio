@@ -50,7 +50,7 @@ function AppHeader() {
 							{activeTheme === 'dark' ? (
 								<Image
 									src={logoDark}
-									className='w-36 cursor-pointer'
+									className='w-48 cursor-pointer'
 									alt='Dark Logo'
 									width={150}
 									height={120}
@@ -58,7 +58,7 @@ function AppHeader() {
 							) : (
 								<Image
 									src={logoLight}
-									className='w-36 cursor-pointer'
+									className='w-48 cursor-pointer'
 									alt='Dark Logo'
 									width={150}
 									height={120}
@@ -122,7 +122,7 @@ function AppHeader() {
 					<div className='border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark'>
 						<button
 							onClick={showHireMeModal}
-							className='font-general-medium sm:hidden block text-left text-md bg-[#016DFD] hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24'
+							className='font-general-medium sm:hidden block text-left text-md bg-[#016DFD] hover:bg-blue-500 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24'
 							aria-label='Hire Me Button'>
 							Hire Me
 						</button>
@@ -154,7 +154,7 @@ function AppHeader() {
 					<div className='hidden md:flex'>
 						<button
 							onClick={showHireMeModal}
-							className='text-md font-general-medium bg-blue-600 hover:bg-blue-800 hover:text-yellow-200 text-white shadow-sm rounded-md px-5 py-2.5 duration-300'
+							className='text-md font-general-medium bg-blue-600 hover:bg-blue-500 hover:text-yellow-300 text-white shadow-sm rounded-md px-5 py-2.5 duration-300'
 							aria-label='Hire Me Button'>
 							Hire Me
 						</button>
@@ -164,11 +164,11 @@ function AppHeader() {
 					<div
 						onClick={() => setTheme(activeTheme)}
 						aria-label='Theme Switcher'
-						className='ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer'>
+						className='ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer hover:text-yellow-400 hover:bg-blue-200 dark:hover:bg-blue-800'>
 						{activeTheme === 'dark' ? (
-							<FiMoon className='text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl' />
+							<FiMoon className='text-ternary-dark hover:text-yellow-400 dark:text-ternary-light dark:hover:text-primary-light text-xl ' />
 						) : (
-							<FiSun className='text-gray-200 hover:text-gray-50 text-xl' />
+							<FiSun className='text-gray-200 hover:text-yellow-400 text-xl' />
 						)}
 					</div>
 				</div>
