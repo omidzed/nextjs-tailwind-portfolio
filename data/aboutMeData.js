@@ -7,7 +7,7 @@ export const aboutMeData = [
 	},
 	{
 		id: uuidv4(),
-		bio: `When I'm not coding, you'll find me exploring the world of mixed martial arts, and other competitive sports.My favorite thing above all is enjoying all of life's gifs and pleasures alongside my amazing family and our adorable, and typically well - behaved pets. (🐶 x3 &  🐱)`,
+		bio: `When I'm not coding, you'll find me exploring the world of mixed martial arts, and other competitive sports. My favorite thing above all is enjoying all of life's gifs and pleasures alongside my amazing family and our adorable, and typically well - behaved pets. (🐶 x3 &  🐱)`,
 	},
 	{
 		id: uuidv4(),
