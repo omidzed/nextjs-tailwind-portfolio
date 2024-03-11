@@ -59,8 +59,8 @@ function AppBanner() {
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 				className='w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0'>
 				<Image
-					width={800}
-					height={800}
+					width={600}
+					height={600}
 					layout='responsive'
 					src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'}
 					alt='Developer'
