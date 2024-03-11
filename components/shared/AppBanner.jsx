@@ -46,7 +46,7 @@ function AppBanner() {
 					className='flex justify-center sm:block'>
 					<a
 						href='/files/Omid-Resume.pdf'
-						className='font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-[#016DFD] py-3 sm:py-3 shadow-lg rounded-lg bg-blue-600 focus:ring-1 focus:[#016DFD] hover:bg-blue-500 text-white hover:text-yellow-300 duration-500'
+						className='font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-[#016DFD] py-3 sm:py-3 shadow-lg rounded-lg bg-blue-500 focus:ring-1 focus:[#016DFD] hover:bg-blue-700 text-white hover:text-yellow-300 duration-500'
 						aria-label='View Resume'>
 
 						<span className='flex justify-center text-sm sm:text-lg pr-2 whitespace-nowrap duration-100'>View My Resume!</span>
