@@ -2,17 +2,14 @@ import { useEffect, useState } from 'react';
 
 const useThemeSwitcher = () => {
   // Set the initial theme based on local storage or default to 'light'
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return (
-        localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light')
-      );
-    }
-    return 'light'; // default theme if window is not available
-  });
+  const [theme, setTheme] = useState(
+    typeof window !== 'undefined'
+      ? localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light')
+      : 'dark' // Use 'dark' as the default if window is not available
+  );
 
   // This function toggles the theme from 'light' to 'dark' or vice versa
   const toggleTheme = () => {

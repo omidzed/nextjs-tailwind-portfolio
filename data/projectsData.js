@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const projectsData = [
   {
-    id: 1,
+    id: '1',
     title: `Let's Parlay`,
     url: 'https://letsparlay.vercel.app/',
     category: 'Web Application',
@@ -81,7 +81,7 @@ export const projectsData = [
     },
   },
   {
-    id: 2,
+    id: '2',
     title: 'Defi-City',
     url: 'https://deficity.vercel.app/',
     category: 'Web Application',

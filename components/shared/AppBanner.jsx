@@ -57,7 +57,7 @@ function AppBanner() {
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-				className='w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0'>
+				className='w-1/2 sm:w-1/3 text-right float-right mt-8 sm:mt-0'>
 				<Image
 					width={600}
 					height={600}
