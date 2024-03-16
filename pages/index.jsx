@@ -10,7 +10,7 @@ export default function Home() {
 
       <AppBanner />
 
-      <span className="flex justify-center text-white my-20 text-2xl">
+      <span className="flex justify-center text-white mt-20 my-20 text-4xl">
         Projects
       </span>
       <ProjectsGrid />
