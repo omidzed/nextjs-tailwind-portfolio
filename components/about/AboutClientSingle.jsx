@@ -1,4 +1,6 @@
 import Image from "next/legacy/image";
+import React from "react";
+import PropTypes from 'prop-types';
 
 function AboutClientSingle({ title, image }) {
 	return (
@@ -13,5 +15,11 @@ function AboutClientSingle({ title, image }) {
 		</div>
 	);
 }
+
+AboutClientSingle.propTypes = {
+	title: PropTypes.string,
+	image: PropTypes.string,
+}
+
 
 export default AboutClientSingle;

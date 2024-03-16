@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FiChevronUp } from 'react-icons/fi';
+import React from "react";
 
 function useScrollToTop() {
 	const [showScroll, setShowScroll] = useState(false);

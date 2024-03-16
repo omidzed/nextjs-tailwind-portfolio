@@ -1,8 +1,10 @@
 import Image from "next/legacy/image";
 import { useState } from 'react';
 import { aboutMeData } from '../../data/aboutMeData';
+import React from "react";
 
 function AboutMeBio() {
+	// eslint-disable-next-line no-unused-vars
 	const [aboutMe, setAboutMe] = useState(aboutMeData);
 	return (
 		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">

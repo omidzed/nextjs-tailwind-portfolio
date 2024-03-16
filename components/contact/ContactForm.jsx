@@ -1,5 +1,6 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
+import React from "react";
 
 function ContactForm() {
 	return (

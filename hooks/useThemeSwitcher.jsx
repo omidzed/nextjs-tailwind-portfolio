@@ -1,20 +1,34 @@
 import { useEffect, useState } from 'react';
 
 const useThemeSwitcher = () => {
-	const [theme, setTheme] = useState(
-		typeof window !== 'undefined' ? localStorage.theme : ''
-	);
-	const activeTheme = theme === 'dark' ? 'light' : 'dark';
+  // Set the initial theme based on local storage or default to 'light'
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return (
+        localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light')
+      );
+    }
+    return 'light'; // default theme if window is not available
+  });
 
-	useEffect(() => {
-		const root = window.document.documentElement;
+  // This function toggles the theme from 'light' to 'dark' or vice versa
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
 
-		root.classList.remove(activeTheme);
-		root.classList.add(theme);
-		localStorage.setItem('theme', theme);
-	}, [theme, activeTheme]);
+  useEffect(() => {
+    const root = window.document.documentElement;
 
-	return [activeTheme, setTheme];
+    // Remove both to ensure no class is left behind in case of any issue
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  return [theme, toggleTheme]; // Return the current theme and the toggle function
 };
 
 export default useThemeSwitcher;

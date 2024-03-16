@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from 'prop-types';
+
 const CounterItem = ({ title, counter, measurement }) => {
 	return (
 		<div className="mb-20 sm:mb-0">
@@ -9,6 +12,12 @@ const CounterItem = ({ title, counter, measurement }) => {
 			</span>
 		</div>
 	);
+};
+
+CounterItem.propTypes = {
+  counter: PropTypes.string,
+  title: PropTypes.string,
+  measurement: PropTypes.string,
 };
 
 export default CounterItem;

@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from 'framer-motion';
 import AboutMeBio from '../components/about/AboutMeBio';
 import PagesMetaHead from '../components/PagesMetaHead';

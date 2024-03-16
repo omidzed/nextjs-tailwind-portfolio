@@ -1,3 +1,5 @@
+import React from "react";
+
 function AppFooterCopyright() {
 	return (
 		<div className='font-general-regular flex justify-center items-center text-center'>
