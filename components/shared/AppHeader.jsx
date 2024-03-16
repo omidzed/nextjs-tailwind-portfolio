@@ -64,20 +64,35 @@ function AppHeader() {
               className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
               aria-label="Projects"
             >
-              <Link href="/projects">Projects</Link>
+              <Link
+                className="hover:underline hover:underline-offset-4"
+                href="/projects"
+              >
+                Projects
+              </Link>
             </div>
             <div
               className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
               aria-label="About Me"
             >
-              <Link href="/about">About Me</Link>
+              <Link
+                className="hover:underline hover:underline-offset-4"
+                href="/about"
+              >
+                About Me
+              </Link>
             </div>
 
             <div
               className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
               aria-label="Contact"
             >
-              <Link href="/contact">Contact</Link>
+              <Link
+                className="hover:underline hover:underline-offset-4"
+                href="/contact"
+              >
+                Contact
+              </Link>
             </div>
           </div>
           <div className="hidden md:flex">
@@ -90,11 +105,13 @@ function AppHeader() {
             </button>
           </div>
           <DarkModeSwitch
-            className={` ${isDarkMode ? 'text-white' : 'text-blue-500'} mr-8`}
-            checked={isDarkMode}
+            className="dark:hover:text-yellow-400 hover:text-blue-300 mr-8"
+            moonColor="#3C82F6"
+            sunColor="white"
+            checked={!isDarkMode}
             onChange={handleToggleDarkMode}
             size={25}
-          />{' '}
+          />
         </div>
       </div>
       <div className="hidden sm:flex justify-between items-center flex-col md:flex-row"></div>
