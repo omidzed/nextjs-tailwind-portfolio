@@ -12,7 +12,7 @@ function AppBanner() {
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
 			className='flex flex-col sm:justify-between items-center sm:flex-row mt-5 md:mt-2'>
-			<div className='w-full md:w-1/2 text-left pl-20'>
+			<div className='w-full md:w-1/2 text-left pl-10'>
 				<motion.h1
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
