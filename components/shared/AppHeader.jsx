@@ -7,7 +7,6 @@ import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 function AppHeader() {
-  //const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [theme, toggleTheme] = useThemeSwitcher();
   const isDarkMode = theme === 'dark';
@@ -15,14 +14,6 @@ function AppHeader() {
   const handleToggleDarkMode = () => {
     toggleTheme(); // Call the toggleTheme function from useThemeSwitcher hook
   };
-
-  // function toggleMenu() {
-  //   if (!showMenu) {
-  //     setShowMenu(true);
-  //   } else {
-  //     setShowMenu(false);
-  //   }
-  // }
 
   function showHireMeModal() {
     if (!showModal) {
@@ -95,15 +86,7 @@ function AppHeader() {
               </Link>
             </div>
           </div>
-          <div className="hidden md:flex">
-            <button
-              onClick={showHireMeModal}
-              className="text-md font-general-medium bg-blue-500 hover:bg-blue-700 text-white hover:text-yellow-200 shadow-sm rounded-md px-5 py-2.5 duration-300 ml-8"
-              aria-label="Hire Me Button"
-            >
-              Hire Me
-            </button>
-          </div>
+
           <DarkModeSwitch
             className="dark:hover:text-yellow-400 hover:text-blue-300 mr-8"
             moonColor="#3C82F6"

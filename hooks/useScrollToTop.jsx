@@ -32,23 +32,23 @@ function useScrollToTop() {
 	}
 
 	return (
-		<>
-			<FiChevronUp
-				className='scrollToTop'
-				onClick={backToTop}
-				style={{
-					backgroundColor: '#066DFF',
-					height: 40,
-					width: 40,
-					padding: 7,
-					borderRadius: 50,
-					right: 50,
-					bottom: 50,
-					display: showScroll ? 'flex' : 'none',
-				}}
-			/>
-		</>
-	);
+    <>
+      <FiChevronUp
+        className="scrollToTop"
+        onClick={backToTop}
+        style={{
+          backgroundColor: '#7BAFD5',
+          height: 40,
+          width: 40,
+          padding: 7,
+          borderRadius: 50,
+          right: 50,
+          bottom: 50,
+          display: showScroll ? 'flex' : 'none',
+        }}
+      />
+    </>
+  );
 }
 
 export default useScrollToTop;

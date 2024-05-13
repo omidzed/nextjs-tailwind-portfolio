@@ -16,7 +16,7 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: `Let's Parlay`,
-        img: '/images/letsParlay/Screenshot 2024-03-09 001212.png',
+        img: '/images/letsParlay/Screenshot 2024-05-12 230032.png',
       },
       {
         id: uuidv4(),
@@ -30,7 +30,6 @@ export const projectsData = [
       },
     ],
     ProjectInfo: {
-      ClientHeading: 'About Client',
       CompanyInfo: [
         {
           id: uuidv4(),
@@ -65,21 +64,9 @@ export const projectsData = [
           ],
         },
       ],
-      ProjectDetailsHeading: 'Challenge',
-      ProjectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-        },
-        {
-          id: uuidv4(),
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-        },
-      ],
     },
   },
+
   {
     id: '2',
     title: 'Defi-City',
@@ -95,31 +82,30 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: 'Defi-City',
-        img: '/images/deficity.png',
+        img: '/images/DefiCity/defiCity5.png',
       },
       {
         id: uuidv4(),
         title: 'Defi-City',
-        img: '/images/deficity.png',
+        img: '/images/DefiCity/deficity7.png',
       },
       {
         id: uuidv4(),
         title: 'Defi-City',
-        img: '/images/deficity.png',
+        img: '/images/DefiCity/deficity.png',
       },
     ],
     ProjectInfo: {
-      ClientHeading: 'About Client',
       CompanyInfo: [
         {
           id: uuidv4(),
           title: 'Website',
-          details: 'https://deficity.vercel.app/',
+          details: 'https://defi-city.vercel.app/',
         },
       ],
       ObjectivesHeading: 'Objective',
       ObjectivesDetails:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        'Defi-City, where the pulse of cryptocurrency markets is always at your fingertips! This app, built with React and TypeScript, harnesses the CoinGecko API to deliver real-time cryptocurrency data. It features a streamlined watchlist, enabling you to easily track and manage your preferred cryptocurrencies. For insights at a glance, I’ve incorporated Victory Line Charts to elegantly display your crypto’s performance over the past week. It’s more than just an app—it’s your essential tool for navigating the dynamic world of cryptocurrencies!',
       Technologies: [
         {
           title: 'Tools & Technologies',
@@ -131,19 +117,6 @@ export const projectsData = [
             'TailwindCSS',
             'AdobeXD',
           ],
-        },
-      ],
-      ProjectDetailsHeading: 'Challenge',
-      ProjectDetails: [
-        {
-          id: uuidv4(),
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-        },
-        {
-          id: uuidv4(),
-          details:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
         },
       ],
     },
