@@ -37,7 +37,7 @@ function AppBanner() {
           }}
           className="font-general-regular mt-4 text-lg md:text-xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          A Full-Stack Software Developer
+          A Full-Stack Software Engineer
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -53,11 +53,11 @@ function AppBanner() {
             href="/files/Omid-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-general-medium flex gap-1 justify-center md:min-w-[14rem] items-baseline mx-40 dark:border-white  mt-12 mb-6 sm:mb-0 text-lg border-2 border-indigo-200   py-3 sm:py-3 shadow-lg rounded-lg bg-blue-500 focus:ring-1 focus:[#016DFD] hover:bg-blue-700 text-white hover:text-yellow-200 duration-500"
+            className="font-general-medium flex gap-1 justify-center md:min-w-[14rem] items-baseline mx-40 dark:border-white border-blue-200 hover:border-yellow-400 mt-12 mb-6 sm:mb-0 text-lg border-2 py-3 sm:py-3 shadow-md rounded-lg bg-blue-600 dark:hover:bg-blue-700 text-white hover:scale-95 hover:bg-blue-700 duration-500"
             aria-label="View Resume"
           >
             <TbExternalLink size={12} />
-            <span className="flex justify-center text-sm sm:text-lg px-2  whitespace-nowrap duration-100 ">
+            <span className="flex justify-center text-sm sm:text-lg px-2 whitespace-nowrap duration-100 ">
               View My Resume!
             </span>
           </a>

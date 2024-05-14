@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
 import PropTypes from 'prop-types';
-
+import { IoClose } from 'react-icons/io5';
 function ProjectSingle({ project }) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  // State to manage selected image
+  const [selectedImage, setSelectedImage] = useState('');
+
+  // Function to open modal and set the selected image
+  const openModal = imgSrc => {
+    setSelectedImage(imgSrc);
+    setModalIsOpen(true);
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <div className="container mx-auto">
       <PagesMetaHead title={project.title} />
@@ -33,22 +47,54 @@ function ProjectSingle({ project }) {
 
       {/* Gallery */}
       <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-        {project.ProjectImages.map(project => {
-          return (
-            <div className="mb-10 sm:mb-0" key={project.id}>
-              <Image
-                src={project.img}
-                className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
-                alt={project.title}
-                key={project.id}
-                layout="responsive"
-                width={100}
-                height={90}
-              />
-            </div>
-          );
-        })}
+        {project.ProjectImages.map(image => (
+          <div
+            className="mb-10 sm:mb-0"
+            key={image.id}
+            onClick={() => openModal(image.img)}
+          >
+            <Image
+              src={image.img}
+              className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+              alt={image.title}
+              layout="responsive"
+              width={100}
+              height={90}
+            />
+          </div>
+        ))}
       </div>
+
+      {/* Modal */}
+      {modalIsOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center cursor-pointer"
+          onClick={() => closeModal()}
+        >
+          <div
+            className="modal-content bg-gray-100 p-2 rounded-xl shadow-lg w-11/12 md:w-3/4 lg:w-2/5 cursor-default"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="text-right">
+              <button
+                className="border-gray-100 border-2 mr-1 rounded-full hover:border-black hover:bg-white transition-transform ease-in duration-75 transform hover:scale-90"
+                style={{ transformOrigin: 'center' }}
+                onClick={closeModal}
+              >
+                <IoClose size={25} />
+              </button>
+            </div>
+            <Image
+              className="rounded-xl p-1"
+              src={selectedImage}
+              alt="Expanded View"
+              layout="responsive"
+              width={1920}
+              height={1080}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Info */}
       <div className="block sm:flex gap-0 sm:gap-10 mx-24 mt-14">
@@ -67,7 +113,7 @@ function ProjectSingle({ project }) {
                   >
                     <span>{info.title}: </span>
                     <a
-                      href="https://stoman.me"
+                      href="https://letsparlay.vercel.app/"
                       className={
                         info.title === 'Website' || info.title === 'Phone'
                           ? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
@@ -122,48 +168,6 @@ function ProjectSingle({ project }) {
   );
 }
 
-// ProjectSingle.propTypes = {
-//   project: PropTypes.shape({
-//     title: PropTypes.string.isRequired,
-//     ProjectHeader: PropTypes.shape({
-//       title: PropTypes.string.isRequired,
-//       publishDate: PropTypes.string.isRequired,
-//       tags: PropTypes.string.isRequired,
-//     }),
-//     ProjectImages: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         id: PropTypes.number.isRequired,
-//         img: PropTypes.string.isRequired,
-//         title: PropTypes.string.isRequired,
-//       })
-//     ),
-//     ProjectInfo: PropTypes.shape({
-//       ObjectivesHeading: PropTypes.string.isRequired,
-//       ObjectivesDetails: PropTypes.string.isRequired,
-//       ClientHeading: PropTypes.string,
-//       CompanyInfo: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           id: PropTypes.string,
-//           title: PropTypes.string,
-//           details: PropTypes.string,
-//         })
-//       ),
-//       Technologies: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           title: PropTypes.string.isRequired,
-//           techs: PropTypes.arrayOf(PropTypes.string),
-//         })
-//       ),
-//       ProjectDetailsHeading: PropTypes.string,
-//       ProjectDetails: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           id: PropTypes.string,
-//           details: PropTypes.string,
-//         })
-//       ),
-//     }),
-//   }).isRequired,
-// };
 ProjectSingle.propTypes = {
   project: PropTypes.shape({
     // Correctly match the expected data types to your project's data structure

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const aboutMeData = [
 	{
 		id: uuidv4(),
-		bio: 'I am a full stack software developer with a keen eye for design and a compass for impactful technology. My journey in tech is driven by a deep - seated passion for creating solutions that matter and a continuous quest for learning and challenging myself in the process.',
+		bio: 'I am a full stack software engineer with a keen eye for design and a compass for impactful technology. My journey in tech is driven by a deep - seated passion for creating solutions that matter and a continuous quest for learning and challenging myself in the process.',
 	},
 	{
 		id: uuidv4(),

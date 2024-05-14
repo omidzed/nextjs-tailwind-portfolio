@@ -72,7 +72,7 @@ export const projectsData = [
     title: 'Defi-City',
     url: 'https://deficity.vercel.app/',
     category: 'Web Application',
-    img: '/images/DefiCity/deficity.png',
+    img: '/images/DefiCity/deficity9.png',
     ProjectHeader: {
       title: 'Defi-City',
       publishDate: 'Feb 20, 2024',

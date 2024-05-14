@@ -1,33 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import HireMeModal from '../HireMeModal';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 function AppHeader() {
-  const [showModal, setShowModal] = useState(false);
   const [theme, toggleTheme] = useThemeSwitcher();
   const isDarkMode = theme === 'dark';
 
   const handleToggleDarkMode = () => {
     toggleTheme(); // Call the toggleTheme function from useThemeSwitcher hook
   };
-
-  function showHireMeModal() {
-    if (!showModal) {
-      document
-        .getElementsByTagName('html')[0]
-        .classList.add('overflow-y-hidden');
-      setShowModal(true);
-    } else {
-      document
-        .getElementsByTagName('html')[0]
-        .classList.remove('overflow-y-hidden');
-      setShowModal(false);
-    }
-  }
 
   return (
     <motion.nav
@@ -73,7 +57,17 @@ function AppHeader() {
                 About Me
               </Link>
             </div>
-
+            <div
+              className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+              aria-label="Qualifications"
+            >
+              <Link
+                className="hover:underline hover:underline-offset-4"
+                href="/qualifications"
+              >
+                Qualifications
+              </Link>
+            </div>
             <div
               className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
               aria-label="Contact"
@@ -95,20 +89,6 @@ function AppHeader() {
             onChange={handleToggleDarkMode}
             size={25}
           />
-        </div>
-      </div>
-      <div className="hidden sm:flex justify-between items-center flex-col md:flex-row"></div>
-
-      {/* Header right section buttons */}
-      <div className="hidden sm:flex justify-between items-center md:flex-row">
-        <div>
-          {showModal ? (
-            <HireMeModal
-              onClose={showHireMeModal}
-              onRequest={showHireMeModal}
-            />
-          ) : null}
-          {showModal ? showHireMeModal : null}
         </div>
       </div>
     </motion.nav>
