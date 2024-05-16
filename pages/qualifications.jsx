@@ -1,6 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import LearningFuzeLogo from '../public/images/logos/learningfuze_logo.jpg';
+import LinkinLogo from '../public/images/logos/LinkedIn_logo.png';
+
 
 const Qualifications = () => {
   return (
@@ -19,7 +22,7 @@ const Qualifications = () => {
           >
             <div className="flex items-end mb-4">
               <Image
-                src={'/images/learningfuze_logo.jpg'}
+                src={LearningFuzeLogo}
                 alt="Logo"
                 width={100}
                 height={100}
@@ -77,7 +80,7 @@ const Qualifications = () => {
           >
             <div className="flex items-end mb-8">
               <Image
-                src={'/images/Linkedin_logo.png'}
+                src={LinkinLogo}
                 alt="Logo"
                 width={100}
                 height={100}
