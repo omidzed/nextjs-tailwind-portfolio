@@ -217,25 +217,23 @@ a {
 	font-family: 'GeneralSans-BoldItalic';
 }
 
-/* Scroll to top style */
 .scrollToTop {
-	@apply bg-indigo-600;
-	@apply text-white;
-	position: fixed;
-	width: 100%;
-	align-items: center;
-	height: 20px;
-	justify-content: center;
-	z-index: 999;
-	cursor: pointer;
-	animation: fadeIn 0.3s;
-	transition: opacity 0.4s;
-	opacity: 1;
+    @apply bg-indigo-600 text-white fixed w-full;
+    @apply items-center justify-center cursor-pointer;
+    height: 20px;
+    z-index: 999;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s, transform 0.2s; /* Added transform transition */
+    opacity: 1;
 }
 
 .scrollToTop:hover {
-	opacity: 1;
+    opacity: 1;
+    background-color: #0275B4;
+    transform: scale(1.2);
 }
+
+
 
 @keyframes fadeIn {
 	0% {
