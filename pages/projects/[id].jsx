@@ -5,7 +5,8 @@ import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
 import PropTypes from 'prop-types';
 import { IoClose } from 'react-icons/io5';
-function ProjectSingle({ project }) {
+
+const ProjectSingle = ({ project }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   // State to manage selected image
   const [selectedImage, setSelectedImage] = useState('');
@@ -113,7 +114,7 @@ function ProjectSingle({ project }) {
                   >
                     <span>{info.title}: </span>
                     <a
-                      href="https://letsparlay.vercel.app/"
+                      href={project.url}
                       className={
                         info.title === 'Website' || info.title === 'Phone'
                           ? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
@@ -166,14 +167,14 @@ function ProjectSingle({ project }) {
       </div>
     </div>
   );
-}
+};
 
 ProjectSingle.propTypes = {
   project: PropTypes.shape({
-    // Correctly match the expected data types to your project's data structure
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
     ProjectHeader: PropTypes.shape({
       title: PropTypes.string.isRequired,
       publishDate: PropTypes.string.isRequired,
@@ -210,7 +211,7 @@ ProjectSingle.propTypes = {
           details: PropTypes.string.isRequired,
         })
       ).isRequired,
-      SocialSharingHeading: PropTypes.string, // Add this if it exists in your data and is not required
+      SocialSharingHeading: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };

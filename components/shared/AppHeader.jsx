@@ -5,11 +5,11 @@ import { motion } from 'framer-motion';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-function AppHeader() {
+const AppHeader = () => {
   const [theme, toggleTheme] = useThemeSwitcher();
   const isDarkMode = theme === 'dark';
 
-  const handleToggleDarkMode = () => {
+  const toggleDarkMode = () => {
     toggleTheme(); // Call the toggleTheme function from useThemeSwitcher hook
   };
 
@@ -17,24 +17,24 @@ function AppHeader() {
     <motion.nav
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      //id="nav"
-      className="sm:container sm:mx-auto"
+      id="nav"
+      className="sm:container sm:mx-auto mb-12"
     >
-      <div className="flex justify-between items-center pt-8 ml-4">
+      <div className="sm:flex justify-between items-start mt-4">
         <Link href="/">
           <Image
             src={
               isDarkMode ? '/images/logo-light.svg' : '/images/logo-dark.svg'
             }
             alt="Logo"
-            width={150}
-            height={120}
-            className="cursor-pointer"
+            width={140}
+            height={140}
+            className="cursor-pointer ml-4 drop-shadow-lg"
           />
         </Link>
         <div className="flex justify-center items-center gap-10">
           {/* Header links large screen */}
-          <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
+          <div className="font-general-medium m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
             <div
               className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
               aria-label="Projects"
@@ -82,17 +82,17 @@ function AppHeader() {
           </div>
 
           <DarkModeSwitch
-            className="dark:hover:text-yellow-400 hover:text-blue-300 mr-8"
-            moonColor="#3C82F6"
+            className="dark:hover:text-yellow-400 hover:drop-shadow-xl"
+            moonColor="dodgerblue"
             sunColor="white"
             checked={!isDarkMode}
-            onChange={handleToggleDarkMode}
+            onChange={toggleDarkMode}
             size={25}
           />
         </div>
       </div>
     </motion.nav>
   );
-}
+};
 
 export default AppHeader;

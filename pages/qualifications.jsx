@@ -3,11 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LearningFuzeLogo from '../public/images/logos/learningfuze_logo.jpg';
 import LinkinLogo from '../public/images/logos/LinkedIn_logo.png';
+import PagesMetaHead from "../components/PagesMetaHead";
 
 
 const Qualifications = () => {
   return (
     <div className="container mx-auto">
+      <PagesMetaHead title="Qualifications" />
       <section className="text-center text-ternary-dark dark:text-ternary-light">
         <h1 className="text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light my-12">
           Qualifications

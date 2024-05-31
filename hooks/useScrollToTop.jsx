@@ -1,37 +1,37 @@
 import { useState, useEffect } from 'react';
 import { FiChevronUp } from 'react-icons/fi';
-import React from "react";
+import React from 'react';
 
-function useScrollToTop() {
-	const [showScroll, setShowScroll] = useState(false);
+const useScrollToTop = () => {
+  const [showScroll, setShowScroll] = useState(false);
 
-	useEffect(() => {
-		window.addEventListener('scroll', scrollToTop);
-		return function cleanup() {
-			window.removeEventListener('scroll', scrollToTop);
-		};
-	});
+  useEffect(() => {
+    window.addEventListener('scroll', scrollToTop);
+    return function cleanup() {
+      window.removeEventListener('scroll', scrollToTop);
+    };
+  });
 
-	const scrollToTop = () => {
-		if (!showScroll && window.pageYOffset > 400) {
-			setShowScroll(true);
-		} else if (showScroll && window.pageYOffset <= 400) {
-			setShowScroll(false);
-		}
-	};
+  const scrollToTop = () => {
+    if (!showScroll && window.pageYOffset > 400) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 400) {
+      setShowScroll(false);
+    }
+  };
 
-	const backToTop = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		});
-	};
+  const backToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
-	if (typeof window !== 'undefined') {
-		window.addEventListener('scroll', scrollToTop);
-	}
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', scrollToTop);
+  }
 
-	return (
+  return (
     <>
       <FiChevronUp
         className="scrollToTop"
@@ -49,6 +49,6 @@ function useScrollToTop() {
       />
     </>
   );
-}
+};
 
 export default useScrollToTop;

@@ -2,7 +2,7 @@ import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
 import React from 'react';
 
-function ContactForm() {
+const ContactForm = () => {
   return (
     <div className="w-full lg:w-1/2">
       <div className="leading-loose">
@@ -74,6 +74,6 @@ function ContactForm() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactForm;

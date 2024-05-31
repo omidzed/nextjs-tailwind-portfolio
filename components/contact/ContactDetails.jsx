@@ -23,7 +23,7 @@ const contacts = [
   },
 ];
 
-function ContactDetails() {
+const ContactDetails = () => {
   return (
     <div className="w-full lg:w-1/2">
       <div className="text-left max-w-xl px-6">
@@ -63,6 +63,6 @@ function ContactDetails() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactDetails;

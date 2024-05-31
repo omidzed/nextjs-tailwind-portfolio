@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PagesMetaHead({ title, keywords, description }) {
+const PagesMetaHead = ({ title, keywords, description }) => {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,7 @@ function PagesMetaHead({ title, keywords, description }) {
       <title>{title}</title>
     </Head>
   );
-}
+};
 
 PagesMetaHead.propTypes = {
   title: PropTypes.string,

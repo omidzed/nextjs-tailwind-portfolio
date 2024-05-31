@@ -7,6 +7,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'GeneralSans-Variable';
+	background-color: #0D2438;
 }
 
 a {
@@ -233,8 +234,6 @@ a {
     transform: scale(1.2);
 }
 
-
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -242,4 +241,13 @@ a {
 	100% {
 		opacity: 0.5;
 	}
+}
+
+.moon-icon {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.moon-icon:hover {
+    filter: sepia(100%) hue-rotate(-50deg) brightness(0.9) saturate(10);
 }
