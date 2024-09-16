@@ -10,8 +10,13 @@ module.exports = {
     extend: {
       colors: {
         // Light colors
+<<<<<<< HEAD
+        'primary-light': '#7BAFD4',
+        'secondary-light': '#FFFFFF',
+=======
         'primary-light': '#F7F8FC',
         'secondary-light': '#fff',
+>>>>>>> d3891ab3f10495f2dd1496504c43aca2a5c720f6
         'ternary-light': '#f6f7f8',
 
         // Dark colors
