@@ -171,7 +171,7 @@ const ProjectSingle = ({ project }) => {
 
 ProjectSingle.propTypes = {
   project: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
@@ -182,7 +182,7 @@ ProjectSingle.propTypes = {
     }).isRequired,
     ProjectImages: PropTypes.arrayOf(
       PropTypes.shape({
-        id: PropTypes.number.isRequired, // or string if your IDs are strings
+        id: PropTypes.string.isRequired, // or string if your IDs are strings
         img: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
       })
